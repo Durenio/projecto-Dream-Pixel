@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dream Pixel-Galeria</title>
+
+
+    <!-- Seus estilos personalizados -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/slaide2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+    <link rel="stylesheet" href="css/mediaqueries.css">
+
+</head>
+<style>
+    .max-container {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 3vh;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        margin: 0 10%;
+        background-color: rgba(156, 156, 156, 0.929);
+
+
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        gap: 15px;
+        max-width: auto;
+        padding: 10px;
+    }
+
+    .gallery a {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .gallery img {
+        width: 100%;
+        height: auto;
+        transition: transform 0.3s ease;
+        mix-blend-mode: multiply;
+    }
+
+    .gallery a:hover img {
+        transform: scale(1.1);
+        mix-blend-mode: normal;
+    }
+
+    @media (max-width: 768px) {
+        .gallery {
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            /* Menores colunas para telas médias */
+        }
+
+    }
+
+    @media (max-width: 480px) {
+        .gallery {
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            /* Menores colunas para telas pequenas */
+        }
+    }
+</style>
+
+<body>
+    
+    <div class="topoheader">
+        <div class="info_contacto">
+           <img src="icons8_phone.ico" alt="">
+           <p>(+244) 956 115 392</p>
+           <img src="iconsdd_envelope.ico" alt="">   
+           <p>dreampixel.ao@gmail.com</p>
+           <img src="icons8_clock.ico" alt=""> 
+           <p> Seg - Sex: 08:00 - 16:00</p>
+
+        </div>
+
+        <div class="redes_sociais">
+            <a href="https://www.facebook.com/profile.php?id=61563541110746" target="_blank">
+                <img src="facebook.png" alt="" class="img">
+            </a>
+            
+            <a href="https://www.instagram.com/dream_pixel_ao?igsh=MWpjcGRmNTVocTN6bA==" target="_blank">
+                <img src="icone_instagram_32.png" alt="">
+            </a>
+            
+            <a href="https://wa.me/244956115392" target="_blank">
+                <img src="whatsapp_30px.png" alt="">
+            </a>
+
+            <a href="mailto:dreampixel.ao@gmail.com" dreampixel.ao@gmail.com="">
+                <img src="icons8_envelope.ico" alt="">
+            </a>
+            
+
+        </div>
+
+    </div> 
+    
+    <header id="main-header">
+
+
+        <div class="logo">
+            <img src="css_incorporado.svg" alt="" class="img1">
+            
+
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sobre.html">Sobre nós</a></li>
+                <li><a href="index.html#servicos">Serviços</li></a>
+                <li><a href="pacote_fotos.html">Pacotes de fotos</a></li>
+                <li><a href="gallery.html" class="open">Galeria de clientes</a></li>
+                <li><a href="contact.html">Contactos</a></li>
+                <a href="agendar.html"><button>Agendar <img src="icons8_schedule.ico" alt=""></button></a>
+            </ul>
+        </nav>
+
+        <button class="menu-btn" onclick="mostrarmenu()"></button>
+            
+
+    </header>
+    <section id="container-menu-mediaqueries">
+        <div class="menu-transparent">
+            <button class="fecharmenu" onclick="fecharmenu()"><img class="fecharmenu-img" src="delete_50px.png" alt=""></button>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobre.html">Sobre nós</a></li>
+                    <li><a href="index.html#servicos">Serviços</li></a>
+                    <li><a href="pacote_fotos.html">Pacotes de fotos</a></li>
+                    <li><a href="gallery.html"  class="open">Galeria de clientes</a></li>
+                    <li><a href="contact.html">Contactos</a></li>
+                    
+                    
+                </ul>
+                <a href="agendar.html"><button>Agendar <img src="icons8_schedule.ico" alt=""></button></a>
+            </nav>
+
+            
+        </div>
+    </section>
+
+    <div class="banner">
+        <div class="filtro"></div>
+    </div>
+
+    <div class="banner_text">
+        <h1>Nosso Portifólio Recente</h1>
+        <div class="caminho">
+            <ul>
+                <li><a href="index.html">Home</a> </li>
+                <li> / </li>
+                <li><a href="gallery.html" class="open">Galeria</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <main>
+        <div class="max-container">
+            <div class="gallery">
+                <!-- linha 1 -->
+                <a href="imagens/gallery1.jpg" data-lightbox="gallery" data-title="Ensaio de  (ar livre) 28/11/2024">
+                    <img src="imagens/gallery1.jpg
+" alt="Imagem 1">
+                </a>
+                <a href="imagens/gallery2.jpg" data-lightbox="gallery" data-title="Ensaio de  (ar livre) 28/11/2024">
+                    <img src="imagens/gallery2.jpg
+" alt="Imagem 2">
+                </a>
+                <a href="imagens/gallery3.jpg" data-lightbox="gallery" data-title="Ensaio de  (ar livre) 28/11/2024">
+                    <img src="imagens/gallery3.jpg
+" alt="Imagem 3">
+                </a>
+                <a href="imagens/gallery4.jpg" data-lightbox="gallery" data-title="Ensaio de  (ar livre) 28/11/2024">
+                    <img src="imagens/gallery4.jpg
+" alt="Imagem 4">
+                </a>
+                <a href="imagens/gallery5.jpg" data-lightbox="gallery" data-title="Ensaio de  (ar livre) 28/11/2024">
+                    <img src="imagens/gallery5.jpg
+" alt="Imagem 5">
+                </a>
+                <a href="imagens/gallery6.jpg" data-lightbox="gallery" data-title="Ensaio de  (ar livre) 28/11/2024">
+                    <img src="imagens/gallery6.jpg
+" alt="Imagem 6">
+                </a>
+                <!-- linha 2 -->
+                <a href="imagens/gallery7.jpg" data-lightbox="gallery" data-title="Cobertura de noivado 22/11/2024">
+                    <img src="imagens/gallery7.jpg
+" alt="Imagem 7">
+                </a>
+                <a href="imagens/gallery8.jpg" data-lightbox="gallery" data-title="Cobertura de noivado 22/11/2024">
+                    <img src="imagens/gallery8.jpg
+" alt="Imagem 8">
+                </a>
+                <a href="imagens/gallery9.jpg" data-lightbox="gallery" data-title="Cobertura de noivado 22/11/2024">
+                    <img src="imagens/gallery9.jpg
+" alt="Imagem 9">
+                </a>
+                <a href="imagens/gallery10.jpg" data-lightbox="gallery" data-title="Cobertura de noivado 22/11/2024">
+                    <img src="imagens/gallery10.jpg
+" alt="Imagem 10">
+                </a>
+                <a href="imagens/gallery11.jpg" data-lightbox="gallery" data-title="Cobertura de noivado 22/11/2024">
+                    <img src="imagens/gallery11.jpg
+" alt="Imagem 11">
+                </a>
+                <a href="imagens/gallery12.jpg" data-lightbox="gallery" data-title="Cobertura de noivado 22/11/2024">
+                    <img src="imagens/gallery12.jpg
+" alt="Imagem 12">
+                </a>
+                <!-- linha 3 -->
+                <a href="imagens/gallery13.jpg" data-lightbox="gallery"
+                    data-title="Cobertura de aniversário 25/05/2024">
+                    <img src="imagens/gallery13.jpg
+" alt="Imagem 13">
+                </a>
+                <a href="imagens/gallery14.jpg" data-lightbox="gallery"
+                    data-title="Cobertura de aniversário 25/05/2024">
+                    <img src="imagens/gallery14.jpg
+" alt="Imagem 14">
+                </a>
+                <a href="imagens/gallery15.jpg" data-lightbox="gallery"
+                    data-title="Cobertura de aniversário 25/05/2024">
+                    <img src="imagens/gallery15.jpg
+" alt="Imagem 15">
+                </a>
+                <a href="imagens/gallery16.jpg" data-lightbox="gallery"
+                    data-title="Sessão fotográfica no estúdio 14/05/2024">
+                    <img src="imagens/gallery16.jpg
+" alt="Imagem 16">
+                </a>
+                <a href="imagens/gallery17.jpg" data-lightbox="gallery"
+                    data-title="Sessão fotográfica no estúdio 14/05/2024">
+                    <img src="imagens/gallery17.jpg
+" alt="Imagem 17">
+                </a>
+                <a href="imagens/gallery18.jpg" data-lightbox="gallery" data-title="Cobertura de noivado 18/06/2024">
+                    <img src="imagens/gallery18.jpg
+" alt="Imagem 18">
+                </a>
+                <!-- linha 4 -->
+                <a href="imagens/gallery19.jpg" data-lightbox="gallery" data-title="Cobertura de noivado 18/06/2024">
+                    <img src="imagens/gallery19.jpg
+" alt="Imagem 19">
+                </a>
+                <a href="imagens/gallery20.jpg" data-lightbox="gallery" data-title="Cobertura de noivado 18/06/2024">
+                    <img src="imagens/gallery20.jpg
+" alt="Imagem 20">
+                </a>
+                <a href="imagens/gallery21.jpg" data-lightbox="gallery" data-title="Cobertura de noivado 18/06/2024">
+                    <img src="imagens/gallery21.jpg
+" alt="Imagem 21">
+                </a>
+                <a href="imagens/gallery22.jpg" data-lightbox="gallery" data-title="Cobertura de noivado 18/06/2024">
+                    <img src="imagens/gallery22.jpg
+" alt="Imagem 22">
+                </a>
+                <a href="imagens/gallery23.jpg" data-lightbox="gallery" data-title="Cobertura de noivado 18/06/2024">
+                    <img src="imagens/gallery23.jpg
+" alt="Imagem 23">
+                </a>
+                <a href="imagens/gallery24.jpg" data-lightbox="gallery" data-title="Cobertura de noivado 18/06/2024">
+                    <img src="imagens/gallery24.jpg
+" alt="Imagem 24">
+                </a>
+
+                <a href="imagens/gallery25.jpg" data-lightbox="gallery" data-title="Cobertura de noivado 18/06/2024">
+                    <img src="imagens/gallery25.jpg
+" alt="Imagem 25">
+
+                </a>
+                <a href="imagens/gallery26.jpg" data-lightbox="gallery" data-title="Cobertura de noivado 18/06/2024">
+                    <img src="imagens/gallery26.jpg
+" alt="Imagem 26">
+                </a>
+                <a href="imagens/gallery27.jpg" data-lightbox="gallery" data-title="Cobertura de noivado 18/06/2024">
+                    <img src="imagens/gallery27.jpg
+" alt="Imagem 27">
+                </a>
+                <a href="imagens/gallery28.jpg" data-lightbox="gallery" data-title="Cobertura de noivado 18/06/2024">
+                    <img src="imagens/gallery28.jpg
+" alt="Imagem 28">
+                </a>
+
+                <a href="imagens/gallery29.jpg" data-lightbox="gallery" data-title="Cobertura de noivado 18/06/2024">
+                    <img src="imagens/gallery29.jpg
+" alt="Imagem 29">
+                </a>
+                <a href="imagens/gallery30.jpg" data-lightbox="gallery" data-title="Cobertura de noivado 18/06/2024">
+                    <img src="imagens/gallery30.jpg
+" alt="Imagem 30">
+                </a>
+
+                <a href="imagens/gallery31.jpg" data-lightbox="gallery" data-title="Cobertura de noivado 18/06/2024">
+                    <img src="imagens/gallery31.jpg
+" alt="Imagem 31">
+                </a>
+            </div>
+        </div>
+
+            <footer>
+        <div class="links">
+            <div class="privacidade">
+                <ul>
+                    <li>Política de cookes</li>
+                    <li>Política de privacidade</li>
+
+                </ul>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobre.html">Sobre nós</a></li>
+                    <li><a href="pacote_fotos.html">Pacotes de fotos</a></li>
+                    <li><a href="index.html#servicos">Serviços</a></li>
+                    <li><a href="gallery.html">Galeria de clientes</a></li>
+                    <li><a href="contact.html">Contactos</a></li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="direitos_reservados">
+            <p>
+            Copyrights <img src="direitos_reservados_img.png"  height="14px" class="Autor Durão Gaspar"> 2025 por Dream Pixel <br><span>Orgulhosamente desenvolvido por-ADDI</span>
+            
+            </p>
+            
+        </div>
+    </footer>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
+    <script src="javascript/script.js"></script>
+    <script src="javascript/cart.js"></script>
+</body>
+
+</html>
